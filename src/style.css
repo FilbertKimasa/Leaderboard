@@ -41,8 +41,7 @@ form button,
   width: 100px;
 }
 
-.refresh-btn {
-  width: 100px;
+form button {
   align-self: flex-end;
 }
 
