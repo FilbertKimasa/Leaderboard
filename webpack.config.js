@@ -5,6 +5,8 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
+    data: './src/modules/data',
+    scores: './src/modules/scores',
   },
   devServer: {
     static: './dist',
