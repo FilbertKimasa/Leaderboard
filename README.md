@@ -67,7 +67,7 @@ Software
 Clone this repository to your desired folder Enter the following commands in the terminal:
 
 ```sh
-  git clone https://github.com/FilbertKimasa/todo-list-app
+  git clone https://github.com/FilbertKimasa/Leaderboard
 ```
 
 ### Install
@@ -140,7 +140,7 @@ npx eslint .
  
 ## 🤝 Contributing <a name="contributing"></a>
 
-You are welcome, and click <a href="https://github.com/FilbertKimasa/todo-list-app/issues">here</a> for any issues🙏
+You are welcome, and click <a href="https://github.com/FilbertKimasa/Leaderboard/issues">here</a> for any issues🙏
 
 ## ⭐️ Show your support <a name="support"></a>
 
