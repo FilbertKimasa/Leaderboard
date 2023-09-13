@@ -6,14 +6,17 @@
     <title>Leaderboard</title>
   </head>
   <body>
-    <header>
+    <header class="main-header">
       <h1>Leaderboard</h1>
     </header>
     <main>
-      <div>
-        <div>
-          <h2>Recent scores <button type="button">Refresh</button></h2>
-          <ul>
+      <section class="main-content flex-row">
+        <div class="score-container flex-column">
+          <h2>
+            Recent scores
+            <button type="button" class="refresh-btn">Refresh</button>
+          </h2>
+          <ul class="flex-column">
             <li>Name: 100</li>
             <li>Name: 100</li>
             <li>Name: 100</li>
@@ -21,13 +24,16 @@
           </ul>
         </div>
         <div>
-          <form action="">
-            <input type="text" />
-            <input type="text" />
-            <button type="submit">Submit</button>
-          </form>
+          <div class="flex-column">
+            <h2>Add your score</h2>
+            <form action="" class="flex-column">
+              <input type="text" />
+              <input type="text" />
+              <button type="submit">Submit</button>
+            </form>
+          </div>
         </div>
-      </div>
+      </section>
     </main>
   </body>
 </html>
