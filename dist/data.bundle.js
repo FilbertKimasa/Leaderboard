@@ -15,7 +15,7 @@
   \*****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst scrores = [\n  { id: 1, name: 'name 1', score: 100 },\n  { id: 1, name: 'name 1', score: 500 },\n  { id: 1, name: 'name 1', score: 70 },\n  { id: 1, name: 'name 1', score: 80 },\n];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (scrores);\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/data.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   addScore: () => (/* binding */ addScore),\n/* harmony export */   scoreUrl: () => (/* binding */ scoreUrl)\n/* harmony export */ });\nconst apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';\nconst gameKey = 'HA3SIpAdpyV6mTFiQEzK';\nconst scoreUrl = `${apiUrl}/games/${gameKey}/scores`;\n\nconst addScore = async (user, score) => {\n  try {\n    const response = await fetch(scoreUrl, {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n      },\n      body: JSON.stringify({ user, score }),\n    });\n    const data = await response.json();\n    // eslint-disable-next-line no-console\n    console.log(data);\n  } catch {\n    throw new Error();\n  }\n};\n\n\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/data.js?");
 
 /***/ })
 
