@@ -23,10 +23,7 @@ const fetchScores = async () => {
 };
 
 const refresh = () => {
-  window.location.reload();
-  if (scoreList === '') {
-    fetchScores();
-  }
+  fetchScores();
 };
 
 export { fetchScores, refresh };
