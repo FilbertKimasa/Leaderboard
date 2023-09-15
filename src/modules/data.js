@@ -1,8 +1,19 @@
-const scrores = [
-  { id: 1, name: 'name 1', score: 100 },
-  { id: 2, name: 'name 2', score: 500 },
-  { id: 3, name: 'name 3', score: 70 },
-  { id: 4, name: 'name 4', score: 80 },
-];
+const apiUrl = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api';
+const gameKey = 'HA3SIpAdpyV6mTFiQEzK';
+const scoreUrl = `${apiUrl}/games/${gameKey}/scores`;
 
-export default scrores;
+const addScore = async (user, score) => {
+  try {
+    await fetch(scoreUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ user, score }),
+    });
+  } catch {
+    throw new Error();
+  }
+};
+
+export { addScore, scoreUrl };
