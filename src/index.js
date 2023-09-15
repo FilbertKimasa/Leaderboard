@@ -1,5 +1,3 @@
-// eslint-disable-next-line no-unused-vars
-import _ from 'lodash';
 import './style.css';
 import { addScore } from './modules/data.js';
 import { refresh, fetchScores } from './modules/scores.js';
