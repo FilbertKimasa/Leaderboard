@@ -1,10 +1,32 @@
-import scrores from './data.js';
+import { scoreUrl } from './data.js';
 
 const scoreList = document.querySelector('.score-list');
-const renderScores = () => {
-  scoreList.innerHTML = scrores
-    .map((score) => ` <li>${score.name} : ${score.score}</li>`)
-    .join('');
+
+const fetchScores = async () => {
+  try {
+    const data = await (
+      await fetch(scoreUrl, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
+    ).json();
+    const scoreArray = data.result;
+    scoreList.innerHTML = scoreArray
+      .map((score) => ` <li>${score.user} : ${score.score}</li>`)
+      .join('');
+    return scoreArray;
+  } catch {
+    throw new Error();
+  }
 };
 
-renderScores();
+const refresh = () => {
+  window.location.reload();
+  if (scoreList === '') {
+    fetchScores();
+  }
+};
+
+export { fetchScores, refresh };
