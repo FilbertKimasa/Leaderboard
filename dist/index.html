@@ -6,29 +6,45 @@
     <title>Leaderboard</title>
   <script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="data.bundle.js"></script><script defer src="scores.bundle.js"></script></head>
   <body>
-    <header class="main-header">
-      <h1>Leaderboard</h1>
-    </header>
-    <main>
+    <div class="backgroung-img"></div>
+    <main class="main-body">
+      <header class="main-header">
+        <h1 class="text-color">Leaderboard</h1>
+      </header>
       <section class="main-content flex-row">
         <div class="score-container flex-column">
-          <h2>
+          <h2 class="text-color border-btm">
             Recent scores
-            <button type="button" class="refresh-btn">Refresh</button>
+            <button type="button" class="refresh-btn input-padding border">
+              Refresh
+            </button>
           </h2>
           <ul class="flex-column score-list"></ul>
         </div>
         <div>
           <div class="flex-column">
-            <h2>Add your score</h2>
+            <h2 class="text-color border-btm">Add your score</h2>
             <form action="" class="flex-column submit-form">
-              <input type="text" id="name" required />
-              <input type="number" id="score" required />
-              <button type="submit">Submit</button>
+              <input
+                type="text"
+                id="name"
+                required
+                class="input-padding"
+                placeholder="User"
+              />
+              <input
+                type="number"
+                id="score"
+                required
+                class="input-padding"
+                placeholder="Score"
+              />
+              <button type="submit" class="input-padding border">Submit</button>
             </form>
           </div>
         </div>
       </section>
     </main>
   </body>
+  <div class="backgroung-img"></div>
 </html>
