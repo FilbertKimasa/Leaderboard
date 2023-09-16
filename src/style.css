@@ -8,17 +8,8 @@
 }
 
 .main-body {
-  /* background-image: url(./assets/background-img.jpg); */
-  /* background-repeat: no-repeat;
-  background-position: center, fixed; */
   position: relative;
   z-index: 20;
-  /* overflow: hidden; */
-  /* background-size: auto 100%; */
-  /* background-position: fixed; */
-  /* position: fixed;
-  top: 0;
-  left: 0; */
 }
 
 .backgroung-img {
