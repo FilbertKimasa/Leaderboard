@@ -1,7 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Black Ops One', cursive;
+}
+
+.main-body {
+  /* background-image: url(./assets/background-img.jpg); */
+  /* background-repeat: no-repeat;
+  background-position: center, fixed; */
+  position: relative;
+  z-index: 20;
+  /* overflow: hidden; */
+  /* background-size: auto 100%; */
+  /* background-position: fixed; */
+  /* position: fixed;
+  top: 0;
+  left: 0; */
+}
+
+.backgroung-img {
+  background-image: url(./assets/background-00.jpg);
+  background-size: 100% 95vh;
+  background-repeat: no-repeat;
+  background-position: top;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  filter: blur(8px);
+  z-index: 0;
 }
 
 .flex-column {
@@ -14,9 +44,19 @@
   flex-direction: row;
 }
 
+.main-header h1 {
+  font-size: 55px;
+  color: #160e0b;
+}
+
 .main-content {
   justify-content: space-around;
-  padding: 20px;
+  padding: 20px 0 20px 0;
+  margin-left: 150px;
+  margin-right: 150px;
+  height: 50%;
+  border: 1px solid #160e0b;
+  background-color: #160e0b1c;
 }
 
 .form-container {
@@ -26,19 +66,51 @@
 form {
   margin-top: 20px;
   gap: 20px;
-  width: 200px;
+  width: 220px;
 }
 
-form input,
-form button,
-.score-container ul li,
-.refresh-btn {
-  height: 30px;
+form input {
+  height: 36px;
+  border-radius: 5px;
+}
+
+form input:focus {
+  outline: none;
+  border: 2px solid #f9cb6a;
+  padding: 3px;
+  font-size: 15px;
+}
+
+form input::placeholder {
+  padding: 3px;
+}
+
+.score-container ul li {
+  margin: 1px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.input-padding {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 form button,
 .refresh-btn {
   width: 100px;
+  background-color: #160e0b;
+  border-radius: 5px;
+  color: #f9e4b5;
+}
+
+form button:hover,
+.refresh-btn:hover {
+  width: 102px;
+  height: 34px;
+  background-color: #f9cb6c;
+  border-radius: 5px;
+  color: #160e0b;
 }
 
 form button {
@@ -55,11 +127,34 @@ form button {
 
 .score-container ul {
   list-style: none;
-  border: 1px solid black;
   width: 450px;
-  padding: 14px 7px 14px 7px;
+  padding: 14px 0 14px 0;
 }
 
-.score-container ul li:nth-child(odd) {
-  background-color: #ddd;
+.score-container ul li {
+  background-color: #160e0b;
+  color: #f9cb6a;
+  font-size: 20px;
+}
+
+.score-list {
+  height: 50vh;
+  overflow-y: scroll;
+}
+
+.score-list::-webkit-scrollbar {
+  display: none;
+}
+
+.border-btm {
+  border-bottom: 3px solid #160e0b;
+  padding-bottom: 5px;
+}
+
+.text-color {
+  color: #160e0b;
+}
+
+.border {
+  border: 2px solid #866b40;
 }
