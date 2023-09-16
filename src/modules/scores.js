@@ -15,8 +15,7 @@ const fetchScores = async () => {
     const scoreArray = data.result;
     scoreList.innerHTML = scoreArray
       .map(
-        (score) =>
-          ` <li class = "border text-color">${score.user} : ${score.score}</li>`
+        (score) => ` <li class = "border text-color">${score.user} : ${score.score}</li>`,
       )
       .join('');
     return scoreArray;

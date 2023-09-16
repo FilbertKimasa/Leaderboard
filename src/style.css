@@ -76,12 +76,6 @@ form input::placeholder {
   padding: 3px;
 }
 
-.score-container ul li {
-  margin: 1px;
-  padding: 5px;
-  border-radius: 5px;
-}
-
 .input-padding {
   padding-top: 5px;
   padding-bottom: 5px;
@@ -95,6 +89,10 @@ form button,
   color: #f9e4b5;
 }
 
+form button {
+  align-self: flex-end;
+}
+
 form button:hover,
 .refresh-btn:hover {
   width: 102px;
@@ -102,10 +100,6 @@ form button:hover,
   background-color: #f9cb6c;
   border-radius: 5px;
   color: #160e0b;
-}
-
-form button {
-  align-self: flex-end;
 }
 
 .main-header {
@@ -126,6 +120,9 @@ form button {
   background-color: #160e0b;
   color: #f9cb6a;
   font-size: 20px;
+  margin: 1px;
+  padding: 5px;
+  border-radius: 5px;
 }
 
 .score-list {
